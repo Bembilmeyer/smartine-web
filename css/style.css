@@ -1,12 +1,15 @@
-html, body {
-  height: 100%;
+@font-face {
+  font-family: 'Avenir Next Cyr Demi';
+  src: url("../fonts/");
+  src: url("../fonts/?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr-Demi.woff") format("woff"), url("../AvenirNextCyr-Demi.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Demi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Avenir Next Cyr Demi', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 * {
@@ -17,16 +20,10 @@ body {
 }
 
 .wrapper {
-  height: 100%;
-  background: url(../img/hero-bg-mobile.jpg) no-repeat;
-  background-size: cover;
-}
-
-@media (min-width: 1024px) {
-  .wrapper {
-    background: url(../img/hero-bg.jpg) no-repeat;
-    background-size: cover;
-  }
+  min-height: 100vh;
+  background: #8854ff;
+  background: linear-gradient(155deg, #8854ff 31%, #004c8c 90%);
+  overflow-x: hidden;
 }
 
 .container {
@@ -137,10 +134,8 @@ body {
 @media (min-width: 1024px) {
   .hero__image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    top: 160px;
+    left: 40%;
     margin-bottom: 0;
   }
 }
@@ -149,6 +144,12 @@ body {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .hero__image img {
+    max-width: 752px;
+  }
 }
 
 .hero__form {
@@ -161,56 +162,14 @@ body {
   }
 }
 
-.hero__input, .hero__btn {
-  font-family: 'Montserrat', sans-serif;
+.hero__btn {
+  font-family: 'Avenir Next Cyr Demi', sans-serif;
   display: block;
   height: 48px;
   border: none;
   outline: none;
   width: 100%;
   font-weight: 600;
-}
-
-@media (min-width: 1024px) {
-  .hero__input, .hero__btn {
-    height: 54px;
-    max-width: 281px;
-  }
-}
-
-.hero__input {
-  background: #fff;
-  font-size: 12px;
-  line-height: 15px;
-  padding: 16px 21px 17px;
-  border-radius: 25px;
-  margin-bottom: 10px;
-}
-
-@media (min-width: 1024px) {
-  .hero__input {
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
-
-.hero__input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.19);
-}
-
-.hero__input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.19);
-}
-
-.hero__input::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.19);
-}
-
-.hero__input::placeholder {
-  color: rgba(0, 0, 0, 0.19);
-}
-
-.hero__btn {
   background: #80ECFA;
   border-radius: 40px;
   color: #3F50C2;
@@ -222,6 +181,8 @@ body {
 
 @media (min-width: 1024px) {
   .hero__btn {
+    height: 54px;
+    max-width: 281px;
     font-size: 24px;
     line-height: 29px;
   }
